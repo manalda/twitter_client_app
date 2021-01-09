@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Cliente Twitter</string>
+    <string name="logo_hint">Twitter logo</string>
+    <string name="init">Haz click para empezar</string>
+    <string name="funcionalidades">Tareas</string>
+    <string name="enviarTweet">Enviar Tweet</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="verTweets">Ver Tweets</string>
+    <string name="actualizar_estado">Actualización de estado</string>
+    <string name="hint_status">Por favor, introduce tu estado en 280 caracteres</string>
+    <string name="button_tweet">Enviar Tweet</string>
+    <string name="titlePreferencias">Cuenta de Twitter</string>
+    <string name="titleAccessTokenSecret">access token secret</string>
+    <string name="titleAccessToken">Access Token</string>
+    <string name="titleConsumerKey">Consumer Key</string>
+    <string name="titleConsumerSecret">Consumer Secret</string>
+</resources>

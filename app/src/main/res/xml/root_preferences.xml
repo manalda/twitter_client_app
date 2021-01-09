@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/titlePreferencias">
+
+        <EditTextPreference
+            android:key="accesstoken"
+            android:icon="@drawable/person"
+            android:summary=""
+            android:title="@string/titleAccessToken" />
+
+        <EditTextPreference
+            android:key="accesstokensecret"
+            android:icon="@drawable/key"
+            android:summary=""
+            android:title="@string/titleAccessTokenSecret" />
+
+        <EditTextPreference
+            android:key="consumerkey"
+            android:icon="@drawable/key"
+            android:summary=""
+            android:title="@string/titleConsumerKey" />
+
+        <EditTextPreference
+            android:key="consumersecret"
+            android:icon="@drawable/key"
+            android:summary=""
+            android:title="@string/titleConsumerSecret" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
