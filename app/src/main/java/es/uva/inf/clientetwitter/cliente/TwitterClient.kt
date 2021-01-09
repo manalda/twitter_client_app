@@ -4,9 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import es.uva.inf.clientetwitter.auxiliar.Constantes
-import es.uva.inf.clientetwitter.auxiliar.ImpossibleToLoadAccountException
+import es.uva.inf.clientetwitter.auxiliar.excepciones.ImpossibleToLoadAccountException
+import es.uva.inf.clientetwitter.auxiliar.excepciones.ReadTimelineException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import twitter4j.Status
 import twitter4j.Twitter
 import twitter4j.TwitterException
 import twitter4j.TwitterFactory
@@ -27,6 +29,8 @@ object TwitterClient {
         builder.setOAuthAccessTokenSecret(readAccessTokenSecret())
 
         twitter =  TwitterFactory(builder.build()).instance
+
+        isAccountLoaded = true
     }
 
     private fun readConsumerKey() : String {
@@ -62,5 +66,10 @@ object TwitterClient {
 
     fun isAccountLoaded() : Boolean {
         return isAccountLoaded
+    }
+
+    fun getTimeline() : List<Status> {
+        return twitter?.userTimeline
+            ?: throw ReadTimelineException("Error al leer el timeline")
     }
 }

@@ -5,7 +5,7 @@
 
         <EditTextPreference
             android:key="accesstoken"
-            android:icon="@drawable/person"
+            android:icon="@drawable/key"
             android:summary=""
             android:title="@string/titleAccessToken" />
 

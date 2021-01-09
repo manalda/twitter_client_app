@@ -11,11 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClienteTwitter">
+
+        <service
+            android:name=".auxiliar.servicios.RefreshService"
+            android:exported="false" />
+
+        <activity android:name=".vista.vertweets.VerTweetsActivity" />
+
         <activity
             android:name=".vista.enviartweet.SendStatusActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
-        <activity
-            android:name=".vista.ajustes.SettingsActivity"/>
+        <activity android:name=".vista.ajustes.SettingsActivity" />
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

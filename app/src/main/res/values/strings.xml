@@ -10,8 +10,10 @@
     <string name="hint_status">Por favor, introduce tu estado en 280 caracteres</string>
     <string name="button_tweet">Enviar Tweet</string>
     <string name="titlePreferencias">Cuenta de Twitter</string>
-    <string name="titleAccessTokenSecret">access token secret</string>
+    <string name="titleAccessTokenSecret">Access Token Secret</string>
     <string name="titleAccessToken">Access Token</string>
     <string name="titleConsumerKey">Consumer Key</string>
     <string name="titleConsumerSecret">Consumer Secret</string>
+    <string name="start_service">Iniciar servicio</string>
+    <string name="stop_service">Parar servicio</string>
 </resources>
