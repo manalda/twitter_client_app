@@ -2,7 +2,7 @@
 
 package es.uva.inf.clientetwitter.auxiliar.servicios
 
-import DBHelper
+import es.uva.inf.clientetwitter.persistencia.DBHelper
 import android.app.IntentService
 import android.content.Intent
 import android.widget.Toast

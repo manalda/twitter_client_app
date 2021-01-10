@@ -1,12 +1,13 @@
 package es.uva.inf.clientetwitter.persistencia
 
-import DBHelper
 import android.content.ContentValues
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import es.uva.inf.clientetwitter.auxiliar.Constantes
 import twitter4j.Status
 
 object DBConnection {
+    private const val READ_TIMELINE = "SELECT *  FROM ${Constantes.TABLA_TWEETS}"
 
     fun insertTimeLine(tweets : List<Status>, helper: DBHelper) {
         val db = helper.writableDatabase
@@ -24,5 +25,10 @@ object DBConnection {
         }
 
         db.close()
+    }
+
+    fun readTimeLine(helper: DBHelper) : Cursor? {
+        val db = helper.readableDatabase
+        return db.rawQuery(READ_TIMELINE, null)
     }
 }

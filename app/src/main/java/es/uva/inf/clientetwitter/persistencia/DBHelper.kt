@@ -1,3 +1,5 @@
+package es.uva.inf.clientetwitter.persistencia
+
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -29,7 +31,4 @@ class DBHelper(context: Context?) :SQLiteOpenHelper(
         onCreate(db)
     }
 
-    fun insertTimeline() {
-
-    }
 }
