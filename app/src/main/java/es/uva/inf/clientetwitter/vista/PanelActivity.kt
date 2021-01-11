@@ -19,7 +19,7 @@ import es.uva.inf.clientetwitter.vista.vertweets.VerTweetsActivity
 class PanelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tareas)
+        setContentView(R.layout.activity_panel)
 
         loadAccountSettings()
 

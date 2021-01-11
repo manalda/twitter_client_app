@@ -22,7 +22,7 @@
             android:name=".vista.enviartweet.SendStatusActivity"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity android:name=".vista.ajustes.SettingsActivity" />
-        <activity android:name=".main.MainActivity">
+        <activity android:name="es.uva.inf.clientetwitter.vista.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

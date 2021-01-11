@@ -1,4 +1,4 @@
-package es.uva.inf.clientetwitter.main
+package es.uva.inf.clientetwitter.vista.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import es.uva.inf.clientetwitter.R
 import es.uva.inf.clientetwitter.vista.PanelActivity
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

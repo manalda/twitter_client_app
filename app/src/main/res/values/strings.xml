@@ -16,4 +16,6 @@
     <string name="titleConsumerSecret">Consumer Secret</string>
     <string name="start_service">Iniciar servicio</string>
     <string name="stop_service">Parar servicio</string>
+    <string name="borrar_datos">Borrar lista</string>
+    <string name="empty_list">Sin tweets</string>
 </resources>

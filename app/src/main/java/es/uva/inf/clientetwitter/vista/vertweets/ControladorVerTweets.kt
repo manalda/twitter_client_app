@@ -6,8 +6,14 @@ import es.uva.inf.clientetwitter.persistencia.DBHelper
 
 class ControladorVerTweets(private val vista : VerTweetsActivity) {
     private val db = DBConnection
+    private val helper = DBHelper(vista)
 
     fun getTimeline() : Cursor? {
-        return db.readTimeLine(DBHelper(vista))
+        return db.readTimeLine(helper)
+    }
+
+    fun deleteTimeline() {
+        db.deleteTimeline(helper)
+        vista.reloadTimeline()
     }
 }

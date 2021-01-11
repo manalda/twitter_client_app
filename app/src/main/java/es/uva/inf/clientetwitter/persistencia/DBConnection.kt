@@ -7,7 +7,8 @@ import es.uva.inf.clientetwitter.auxiliar.Constantes
 import twitter4j.Status
 
 object DBConnection {
-    private const val READ_TIMELINE = "SELECT *  FROM ${Constantes.TABLA_TWEETS}"
+    private const val READ_TIMELINE = "select *  from ${Constantes.TABLA_TWEETS}"
+    private const val DELETE_TIMELINE = "delete from ${Constantes.TABLA_TWEETS}"
 
     fun insertTimeLine(tweets : List<Status>, helper: DBHelper) {
         val db = helper.writableDatabase
@@ -30,5 +31,10 @@ object DBConnection {
     fun readTimeLine(helper: DBHelper) : Cursor? {
         val db = helper.readableDatabase
         return db.rawQuery(READ_TIMELINE, null)
+    }
+
+    fun deleteTimeline(helper: DBHelper) {
+        val db = helper.writableDatabase
+        db.execSQL(DELETE_TIMELINE)
     }
 }

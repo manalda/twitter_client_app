@@ -3,13 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".vista.vertweets.VerTweetsActivity">
 
     <ListView
         android:id="@+id/tweets_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:divider="@color/white"
         android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/borrarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/borrar_datos"
+        android:textColor="@color/white"
+        android:background="@drawable/boton_redondeado" />
+
+    <TextView
+        android:id="@+id/emptyContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/twitter_blue"
+        android:text="@string/empty_list"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

@@ -2,7 +2,9 @@
 
 package es.uva.inf.clientetwitter.vista.vertweets
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ListView
 import android.widget.SimpleCursorAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +20,13 @@ class VerTweetsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_tweets)
 
+        val borrarLista : Button = findViewById(R.id.borrarDatos)
+        borrarLista.setOnClickListener {
+            controlador.deleteTimeline()
+        }
+
         tweetsContainer = findViewById(R.id.tweets_container)
+        tweetsContainer?.emptyView = findViewById(R.id.emptyContainer)
         loadTweets()
     }
 
@@ -31,5 +39,9 @@ class VerTweetsActivity : AppCompatActivity() {
         adapter.viewBinder = TimeStampConverter
 
         tweetsContainer?.adapter = adapter
+    }
+
+    fun reloadTimeline() {
+        startActivity(Intent(this, VerTweetsActivity::class.java))
     }
 }
